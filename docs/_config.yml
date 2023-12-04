@@ -1,7 +1,7 @@
 # Configuration Options
 title: Example MicroPs Project Website
 author: "Prof. Josh Brake"
-theme: minima
+theme: architect
 
 header-pages:
   - documentation.html
