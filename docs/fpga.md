@@ -108,3 +108,5 @@ val2Send[15:12]|val2Send[11:0]|
 This gives the output of the DAC on channel A with no gain in constant conversion mode. The DAC has space for 12 bits of voltage value but only 8 bits are generated (volVal) so, the lower 8 bits of val2Send is used. 
 
 See the [MCP4921](https://ww1.microchip.com/downloads/en/DeviceDoc/22248a.pdf) for more information on sending values.
+
+
