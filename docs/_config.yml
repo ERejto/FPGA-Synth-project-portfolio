@@ -1,11 +1,12 @@
 # Configuration Options
-title: Example MicroPs Project Website
-author: "Prof. Josh Brake"
+title: Digital Synthisizer MicroPs Final Project
+author: "Kevin Box and Eli Rejito"
 theme: minima
 
 header-pages:
   - documentation.html
   - resources.html
+  - fpga.hmtl
 
 
 # Github Pages settings that cannot be changed
