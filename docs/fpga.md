@@ -13,11 +13,16 @@ The FPGA is used to generate waveforms and perform DSP on produced wave in accor
 
 ## Table of Contents
 
-[MCU SPI In](#MCU-SPI-IN)  
-[Settings Memory](#Settings-Memory)    
-[Wave Generation](#Wave-Generation)   
-[Filtering](#Filtering)   
-[SPI to DAC](#SPI-to-DAC)
+- [FPGA Design](#fpga-design)
+  - [Table of Contents](#table-of-contents)
+  - [MCU SPI In](#mcu-spi-in)
+  - [Settings Memory](#settings-memory)
+  - [Wave Generation](#wave-generation)
+    - [Phase Accumulation](#phase-accumulation)
+    - [Wave Tables](#wave-tables)
+    - [Frequency Modulation](#frequency-modulation)
+  - [Filtering](#filtering)
+  - [SPI to DAC](#spi-to-dac)
 
 ## MCU SPI In 
 
@@ -30,6 +35,7 @@ This block reads information coming from MCU over SPI and sends it to the memory
 The MCU sends 16 bits to the FPGA over the spi link. The 16 bits (recVal) are divided into different parts depending on the type of send. The most significant byte is always the memory destination, the bottom 12 bits contain information. To play a note at a given frequency address 0x0 is used. With address zero the next byte is the note, followed by 2 bytes that determine the wave type of the modulation and wavetype of the carrier. (See [frequency modulation (FM)](#frequency-modulation) for more info). Addresses 0x1 and 0x2 are settings addresses, and save 2 values, 6 bits each to the settings register. See below for configurations. Currently only 3 different adresses are used so there is room for more configurations or settings to be sent/saved.
 
 **Play note**
+
 | Addr | Note | Carrier Wave | Modulation Wave |
 |------|------|--------------|-----------------|
 |recVal[15:12]|recVal[11:8]|recVal[7:4]|recVal[3:0]|
@@ -41,6 +47,7 @@ There is some room to add more playable notes or a lot more waveypes.
 **Update Settings**
 
 Settings can use the full range of 6 bits provided to them from 0b000000-0b111111.
+
 | Addr | Setting 1 | Setting 2|
 |------|------|--------------|
 |recVal[15:12]|recVal[11:6]|recVal[5:0]|
@@ -98,6 +105,7 @@ This block sends voltage values to the SPI DAC every time a new voltage value is
 |<div style="text-align: center"> <img src="./assets/schematics/spiSend.png" alt="SPI send BD" width="250" /></div>| <div style="text-align: center"> <img src="./assets/schematics/spiSendFSM.png" alt="SPI send FSM" width="250" /></div>|
 
 Due to the way the SPI DAC works, SPI sends are configured in the following way
+
 |Control Bits|Value|
 |---|---|
 val2Send[15:12]|val2Send[11:0]|
