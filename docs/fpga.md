@@ -1,8 +1,6 @@
 ---
 layout: page
-title: FPGA Design
-permalink: /
-exclude: true
+title: FPGA
 ---
 
 # FPGA Design
