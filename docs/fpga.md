@@ -27,11 +27,6 @@ The FPGA is used to generate waveforms and perform DSP on produced wave in accor
 ## MCU SPI In 
 
 This block reads information coming from MCU over SPI and sends it to the memory.    
-
-| Block Diagram | FSM|
-|---------|------|
-|<div style="text-align: center"> <img src="./assets/schematics/spiRecieve.png" alt="SPI recieve BD" width="250" /></div>| <div style="text-align: center"> <img src="./assets/schematics/spiRecieveFSM.png" alt="SPI recieve FSM" width="250" /></div>|
-
 The MCU sends 16 bits to the FPGA over the spi link. The 16 bits (recVal) are divided into different parts depending on the type of send. The most significant byte is always the memory destination, the bottom 12 bits contain information. To play a note at a given frequency address 0x0 is used. With address zero the next byte is the note, followed by 2 bytes that determine the wave type of the modulation and wavetype of the carrier. (See [frequency modulation (FM)](#frequency-modulation) for more info). Addresses 0x1 and 0x2 are settings addresses, and save 2 values, 6 bits each to the settings register. See below for configurations. Currently only 3 different adresses are used so there is room for more configurations or settings to be sent/saved.
 
 **Play note**
@@ -89,7 +84,7 @@ Frequency modulation is a way to change to sound, or wave characteristics, of a 
 
 $$V(t) = sin (2 \pi f_c t + \beta sin(2 \pi f_m t))$$
 
-Where $f_c$ and $f_m$ and the frequency of the carrier wave and modulation wave respectively. $\beta$ is a constant that determines how much the modulation affects the carrier. This comes from the settings memory and therefore the MCU. In implemenattion this uses 2 phase accumulators, 2 wave tables, and a multiply-add block. Every cycle, the modulation wave is generated, $sin(2 \pi f_m t)$, then it is multiplied by $\beta$ and added to the carrier accumulator. A $\beta = 0$ turns frequency modulation off. 
+Where $f_c$ and $f_m$ are the frequency of the carrier wave and modulation wave respectively. $\beta$ is a constant that determines how much the modulation affects the carrier. This comes from the settings memory and therefore the MCU. In implemenattion this uses 2 phase accumulators, 2 wave tables, and a multiply-add block. Every cycle, the modulation wave is generated, $sin(2 \pi f_m t)$, then it is multiplied by $\beta$ and added to the carrier accumulator. A $\beta = 0$ turns frequency modulation off. 
 
 <!-- reference matlab -->
 
