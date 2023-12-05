@@ -23,6 +23,7 @@ The FPGA is used to generate waveforms and perform DSP on produced wave in accor
     - [Frequency Modulation](#frequency-modulation)
   - [Filtering](#filtering)
   - [SPI to DAC](#spi-to-dac)
+  - [Further Work](#further-work)
 
 ## MCU SPI In 
 
@@ -112,5 +113,14 @@ val2Send[15:12]|val2Send[11:0]|
 This gives the output of the DAC on channel A with no gain in constant conversion mode. The DAC has space for 12 bits of voltage value but only 8 bits are generated (volVal) so, the lower 8 bits of val2Send is used. 
 
 See the [MCP4921](https://ww1.microchip.com/downloads/en/DeviceDoc/22248a.pdf) for more information on sending values.
+
+
+## Further Work
+
+*add in more settings, configurable frequencies, frequency math to the fpga so can send over freq instead of predetermined note, move phase accumulators to DSP block, move wavetables to BRAM*
+
+Add in thing about unreachable states 
+
+Explain Matlab in here
 
 
