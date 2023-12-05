@@ -8,7 +8,7 @@ title: FPGA
 The FPGA is used to generate waveforms and perform DSP on produced wave in accordance with the settings sent over by the MCU. It contains blocks to receive information over SPI from the MCU, save relevant settings recived from the MCU, generate the waves, *filter the resultant wave*, and send the wave over SPI to a DAC. The design is clocked at 12 MHz and *the sampling rate for the waves is 48kHz.*
 
 <div style="text-align: center">
-  <img src="./assets/schematics/fpgaBlockDiagram.pdf" alt="fpga block diagram" width="500" />
+  <img src="./assets/schematics/fpgaBlockDiagram.png" alt="fpga block diagram" width="500" />
 </div>
 
 ## Table of Contents
@@ -101,7 +101,7 @@ This block sends voltage values to the SPI DAC every time a new voltage value is
 
 | Block Diagram | FSM|
 |---------|------|
-|<div style="text-align: center"> <img src="./assets/schematics/spiSend.png" alt="SPI send BD" width="250" /></div>| <div style="text-align: center"> <img src="./assets/schematics/spiSendFSM.pdf" alt="SPI send FSM" width="250" /></div>|
+|<div style="text-align: center"> <img src="./assets/schematics/spiSend.png" alt="SPI send BD" width="250" /></div>| <div style="text-align: center"> <img src="./assets/schematics/spiSendFSM.png" alt="SPI send FSM" width="250" /></div>|
 
 Due to the way the SPI DAC works, SPI sends are configured in the following way
 
