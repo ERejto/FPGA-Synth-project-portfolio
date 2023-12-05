@@ -74,7 +74,7 @@ Phase Accumulation is used to fetch waves at varying frequencies. This is done u
 
 $$addVal = \frac {(k*f_{des})}{f_{clk}}$$
 
-Where $$k$$ is a constant given by the actual value of one index ($$indexVal$$) times the maximum value of the index, ($$indexes$$), $$k = indexVal * indexes$$. In our case,$$indexVal = 0x01000000, 0d16777216$$ and $$indexes = 256$$. This is because the index is the upper 8 bits of a 32 bit accumulator.  
+Where $k$ is a constant given by the actual value of one index ($indexVal$) times the maximum value of the index, ($indexes$), $k = indexVal * indexes$. In our case, $indexVal = 0x01000000, 0d16777216$ and $indexes = 256$. This is because the index is the upper 8 bits of a 32 bit accumulator.  
 
 
 ### Wave Tables
@@ -85,11 +85,11 @@ The wave tables are simple modules that take in an index and return a voltage va
 
 ###  Frequency Modulation
 
-Frequency modulation is a way to change to sound, or wave characteristics, of a given wave. The original wave, or carrier wave, is modulated by a different wave, a modulation wave, to produce a final wave. See below for an example. The formula for a frequency modulated wave $$V(t)$$ is given by  
+Frequency modulation is a way to change to sound, or wave characteristics, of a given wave. The original wave, or carrier wave, is modulated by a different wave, a modulation wave, to produce a final wave. See below for an example. The formula for a frequency modulated wave $V(t)$ is given by  
 
 $$V(t) = sin (2 \pi f_c t + \beta sin(2 \pi f_m t))$$
 
-Where $$f_c$$ and $$f_m$$ and the frequency of the carrier wave and modulation wave respectively. $$\beta$$ is a constant that determines how much the modulation affects the carrier. This comes from the settings memory and therefore the MCU. In implemenattion this uses 2 phase accumulators, 2 wave tables, and a multiply-add block. Every cycle, the modulation wave is generated, $$sin(2 \pi f_m t)$$, then it is multiplied by $$\beta$$ and added to the carrier accumulator. A $$\beta = 0$$ turns frequency modulation off. 
+Where $f_c$ and $f_m$ and the frequency of the carrier wave and modulation wave respectively. $\beta$ is a constant that determines how much the modulation affects the carrier. This comes from the settings memory and therefore the MCU. In implemenattion this uses 2 phase accumulators, 2 wave tables, and a multiply-add block. Every cycle, the modulation wave is generated, $sin(2 \pi f_m t)$, then it is multiplied by $\beta$ and added to the carrier accumulator. A $\beta = 0$ turns frequency modulation off. 
 
 <!-- reference matlab -->
 
