@@ -87,6 +87,10 @@ $$V(t) = sin (2 \pi f_c t + \beta sin(2 \pi f_m t))$$
 
 Where $f_c$ and $f_m$ are the frequency of the carrier wave and modulation wave respectively. $\beta$ is a constant that determines how much the modulation affects the carrier. This comes from the settings memory and therefore the MCU. In implemenattion this uses 2 phase accumulators, 2 wave tables, and a multiply-add block. Every cycle, the modulation wave is generated, $sin(2 \pi f_m t)$, then it is multiplied by $\beta$ and added to the carrier accumulator. A $\beta = 0$ turns frequency modulation off. 
 
+<div style="text-align: center">
+  <img src="./assets/img/fmExample.png" alt="fm example" width="500" />
+</div>
+
 <!-- reference matlab -->
 
 ## Filtering   
