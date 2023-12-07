@@ -60,7 +60,7 @@ The settings memory is a simple module that saves that recieved value from SPI t
 Wave generation is the main block of the FPGA and is what the rest of the system is driven around. It built of [phase accumulators](#phase-accumulation) and [wave tables](#wave-tables) to generate the final wave. Two of each are needed, one each to drive the frequency modulator and one each to determine the main wave. The general idea is that the phase accumulator creates an index that changes variably based on the frequency desired and the index is used to fetch the value of the wave at the given index.
 
 <div style="text-align: center">
-  <img src="./assets/schematics/waveGenBlockDiagram.png" alt="wave gen block diagram" width="500" />
+  <img src="./assets/schematics/Wave_Gen.png" alt="wave gen block diagram" width="1000" />
 </div>
 
 
