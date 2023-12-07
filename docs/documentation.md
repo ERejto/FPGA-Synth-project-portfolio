@@ -6,6 +6,14 @@ title: Documentation
 # Schematics
 <!-- Include images of the schematics for your system. They should follow best practices for schematic drawings with all parts and pins clearly labeled. You may draw your schematics either with a software tool or neatly by hand. -->
 
+The circuit has three main parts: the MCU, the FPGA, and the SPI DAC. All three are connected via SPI and the buttons are attached directly to the MCU GPIO Pins.
+
+
+<div style="text-align: center">
+  <img src="./assets/schematics/Final_Schematic.png" alt="fpga block diagram" width="1000" />
+</div>
+
+
 # Source Code Overview
 <!-- This section should include information to describe the organization of the code base and highlight how the code connects. -->
 
@@ -28,4 +36,4 @@ The source code for the project is located in the Github repository [here](new l
 
 # References 
 
-Website Title, Short Description. [link](here)
+Website Title, Short Description. [link](https://github.com/ERejto/FPGA_Synthesizer)
