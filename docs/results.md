@@ -1,12 +1,13 @@
 # Results
 
 ## New Hardware
+There are three pieces of "new" hardware used in this design. The first is the the SPI DAC. While initially we wanted to utilize the MCU's onboard DAC to do data conversions, we ran into speed problems and moved onto a higher resolution better quality DAC. The second piece of new hardware is the MCU's ADC peripheral. This peripheral works by scanning through a multiple ADC channels at a high speed and writing these values to memory. The channels used on the ADC are configurable and in our case we configured the ADC to scan through four channels at maximum speed. The last piece of "new" hardware is the FPGA's MAC block. This MAC was necessary to implement FM since this operation requires fast multiplication and addition. 
 
 ## Design Decisions
 
 ### C Program Architecture
 
-Interrupts and RTOS were not used on the micro-controller C program to enable reading signals and sending things to the FPGA. 
+Due to the speed requirements of our system, interrupts were not required. The code polls the GPIO pins and ADC pins for changes, then sends these changes via SPI. Each poll takes about 100 clock cycles which at a 16 MHz ends up being a 160 kHz sampling rate. 
 
 ### Note and Wave Type Widths
 
