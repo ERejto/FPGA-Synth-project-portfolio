@@ -8,7 +8,7 @@ title: FPGA
 The FPGA is used to generate waveforms and perform DSP on produced wave in accordance with the settings sent over by the MCU. It contains blocks to receive information over SPI from the MCU, save relevant settings recived from the MCU, generate the waves, *filter the resultant wave*, and send the wave over SPI to a DAC. The design is clocked at 12 MHz and *the sampling rate for the waves is 48kHz.*
 
 <div style="text-align: center">
-  <img src="./assets/schematics/fpgaBlockDiagram.png" alt="fpga block diagram" width="500" />
+  <img src="./assets/schematics/fpgaBlockDiagram.png" alt="fpga block diagram" width="1000" />
 </div>
 
 ## Table of Contents
