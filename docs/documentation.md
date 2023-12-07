@@ -17,7 +17,7 @@ The circuit has three main parts: the MCU, the FPGA, and the SPI DAC. All three 
 # Source Code Overview
 <!-- This section should include information to describe the organization of the code base and highlight how the code connects. -->
 
-The source code for the project is located in the Github repository [here](new link).
+The source code for the project is located in the Github repository [here](https://github.com/ERejto/FPGA_Synthesizer).
 
 # Bill of Materials
 <!-- The bill of materials should include all the parts used in your project along with the prices and links.  -->
@@ -36,4 +36,4 @@ The source code for the project is located in the Github repository [here](new l
 
 # References 
 
-Website Title, Short Description. [link](https://github.com/ERejto/FPGA_Synthesizer)
+Website Title, Short Description. [link]()
