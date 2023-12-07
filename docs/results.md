@@ -6,7 +6,7 @@
 
 ### C Program Architecture
 
-Interrupts and RTOS were not used on the micro-controller C program to enable reading signals and sending things to the FPGA. 
+Due to the speed requirements of our system, interrupts were not required. The code polls the GPIO pins and ADC pins for changes, then sends these changes via SPI. Each poll takes about 100 clock cycles which at a 16 MHz ends up being a 160 kHz sampling rate. 
 
 ### Note and Wave Type Widths
 
