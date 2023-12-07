@@ -1,6 +1,7 @@
 # Results
 
 ## New Hardware
+There are three pieces of "new" hardware used in this design. The first is the the SPI DAC. While initially we wanted to utilize the MCU's onboard DAC to do data conversions, we ran into speed problems and moved onto a higher resolution better quality DAC. The second piece of new hardware is the MCU's ADC peripheral. This peripheral works by scanning through a multiple ADC channels at a high speed and writing these values to memory. The channels used on the ADC are configurable and in our case we configured the ADC to scan through four channels at maximum speed. The last piece of "new" hardware is the FPGA's MAC block. This MAC was necessary to implement FM since this operation requires fast multiplication and addition. 
 
 ## Design Decisions
 

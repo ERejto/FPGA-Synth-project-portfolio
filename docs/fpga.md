@@ -60,7 +60,7 @@ The settings memory is a simple module that saves that recieved value from SPI t
 Wave generation is the main block of the FPGA and is what the rest of the system is driven around. It built of [phase accumulators](#phase-accumulation) and [wave tables](#wave-tables) to generate the final wave. Two of each are needed, one each to drive the frequency modulator and one each to determine the main wave. The general idea is that the phase accumulator creates an index that changes variably based on the frequency desired and the index is used to fetch the value of the wave at the given index.
 
 <div style="text-align: center">
-  <img src="./assets/schematics/waveGenBlockDiagram.png" alt="wave gen block diagram" width="500" />
+  <img src="./assets/schematics/Wave_Gen.png" alt="wave gen block diagram" width="1000" />
 </div>
 
 
@@ -86,6 +86,10 @@ Frequency modulation is a way to change to sound, or wave characteristics, of a 
 $$V(t) = sin (2 \pi f_c t + \beta sin(2 \pi f_m t))$$
 
 Where $f_c$ and $f_m$ are the frequency of the carrier wave and modulation wave respectively. $\beta$ is a constant that determines how much the modulation affects the carrier. This comes from the settings memory and therefore the MCU. In implemenattion this uses 2 phase accumulators, 2 wave tables, and a multiply-add block. Every cycle, the modulation wave is generated, $sin(2 \pi f_m t)$, then it is multiplied by $\beta$ and added to the carrier accumulator. A $\beta = 0$ turns frequency modulation off. 
+
+<div style="text-align: center">
+  <img src="./assets/img/fmExample.png" alt="fm example" width="500" />
+</div>
 
 <!-- reference matlab -->
 
