@@ -16,3 +16,15 @@ Most of the following specs were not met due to time constraints along with thei
 
 - I2C Button Expander
   - The I2C Button expander was not used. This was due to spending around 20 hours trying to get it to work. Transactions worked periodically however it was not consistent enough to be considered functional.
+ 
+  - This is a working I2C communication.
+ 
+  <div style="text-align: center">
+  <img src="./assets/schematics/I2C_COM1.png" alt="wave gen block diagram" width="1000" />
+</div>
+
+- Here is a continously reading transaction, but the peripheral never sends an ACK bit.
+
+  <div style="text-align: center">
+  <img src="./assets/schematics/I2C_COM2.png" alt="wave gen block diagram" width="1000" />
+</div>
