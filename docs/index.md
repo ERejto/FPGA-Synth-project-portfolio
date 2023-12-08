@@ -29,3 +29,7 @@ The MCU will handle all the communications to peripherals. It will read in value
 Both of us have been interested in music and wanted to do a project that combined our interest in music and our interest in engineering. We thought that a digital synth would be a great combination of these two topics and a way to improve our MicroP's skills.
 
 # System Block Diagram
+
+<div style="text-align: left">
+  <img src="./assets/schematics/System_Block.png" alt="logo" width="1000" />
+</div>
