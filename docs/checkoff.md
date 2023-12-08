@@ -1,8 +1,14 @@
+---
+layout: page
+title: Checkoff
+exclude: true
+---
+
 # Notes and Writeup for Checkoff
 
-## Proficiency Specs
+This contains the written explanations for checkoff
 
-### Specs that were not met:
+## Specs that were not met:
 Most of the following specs were not met due to time constraints along with their other considerations.
 
 - Making an output filter that is tunable
