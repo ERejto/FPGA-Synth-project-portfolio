@@ -16,4 +16,10 @@ Frequency Modulation and Phase Accumulators
 
 # Inspiration
 
-link the computer synth
+We were inspired by FM synthesizer's that have been built in the past. Here is one example of an FM synthesizer. 
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed?v=kE_MHSBmmX8">
+</iframe>
+
+
