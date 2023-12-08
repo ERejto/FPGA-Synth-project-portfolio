@@ -47,3 +47,11 @@ Both of us have been interested in music and wanted to do a project that combine
 
 
 ### Acknowledgement 
+
+We would like to thank Prof. Brake for sticking with the class and being present during a super busy semester with his new born. 
+
+We would like to thank Prof Tina for adding insight and asking good questions. 
+
+We would like to thank "why is it cool" for providing motivation throughout. 
+
+Lastly we would like to thank E155 for developing our skills and creating an environment that forced us to learn. 
