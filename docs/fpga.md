@@ -123,8 +123,5 @@ See the [MCP4921](https://ww1.microchip.com/downloads/en/DeviceDoc/22248a.pdf) f
 
 *add in more settings, configurable frequencies, frequency math to the fpga so can send over freq instead of predetermined note, move phase accumulators to DSP block, move wavetables to BRAM*
 
-Add in thing about unreachable states 
-
-Explain Matlab in here
 
 
