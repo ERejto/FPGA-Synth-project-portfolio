@@ -18,7 +18,4 @@ Frequency Modulation and Phase Accumulators
 
 We were inspired by FM synthesizer's that have been built in the past. Here is one example of an FM synthesizer. 
 
-
-
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed?v=kE_MHSBmmX8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Here is a video showcasing an FM synthesizer. [link](https://www.youtube.com/embed?v=kE_MHSBmmX8)
