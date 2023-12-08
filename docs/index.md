@@ -31,5 +31,5 @@ Both of us have been interested in music and wanted to do a project that combine
 # System Block Diagram
 
 <div style="text-align: left">
-  <img src="./assets/img/System_Block.png" alt="logo" width="1000" />
+  <img src="./assets/schematics/System_Block.png" alt="logo" width="1000" />
 </div>
