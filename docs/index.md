@@ -25,7 +25,7 @@ The MCU will handle all the communications to peripherals. It will read in value
 
 Engineering major at Harvey Mudd College interested in RTL microarcitecture and embbeded systems. Played soccer for CMS during his time at HMC and likes to ski and travel when not busy.
 
-### Eli Reijto:
+### Eli Rejto:
 
 Engineering major at Harvey Mudd College interested in embedded design and music. PLayed baseball for CMS during his time at HMC and likes cook and DJ when not busy. 
 
