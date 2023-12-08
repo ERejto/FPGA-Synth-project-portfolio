@@ -39,7 +39,3 @@ The source code for the project is located in the Github repository [here](https
 <!-- Need to add amp, speaker, buttons, and any resistors/caps used in final production -->
 
 **Total cost: $101.11**
-
-# References 
-
-Website Title, Short Description. [link]()
